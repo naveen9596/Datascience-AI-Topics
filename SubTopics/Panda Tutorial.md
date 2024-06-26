@@ -50,6 +50,14 @@ Use read_csv() with the path to the CSV file to read a comma-separated values fi
 ```python
 df = pd.read_csv("diabetes.csv")
 ```
+Example:
+```python
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+print(df.to_string())
+```
 
 This read operation loads the CSV file diabetes.csv to generate a pandas Dataframe object df.
 
@@ -229,6 +237,17 @@ Calling the .columns attribute of a DataFrame object returns the column names in
 ```python
 df.columns
 ```
+
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/4dc09e7b-9a92-48ff-971e-9a8b953f1fc9)
+
+It can be converted to a list using a list() function.
+
+```python
+list(df.columns)
+```
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/6f0fe88c-bd05-41ea-a233-49bda3400be4)
+
+
 
 
                                 
