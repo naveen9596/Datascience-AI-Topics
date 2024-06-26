@@ -118,8 +118,22 @@ Call .to_excel() from the DataFrame object to save it as a “.xls” or “.xls
 df.to_excel("diabetes_out.xlsx", index=False)
 ```
 
+## Viewing and understanding DataFrames using pandas 
+After reading tabular data as a DataFrame, you would need to have a glimpse of the data. You can either view a small sample of the dataset or a summary of the data in the form of summary statistics.
 
+## How to view data using .head() and .tail()
 
+You can view the first few or last few rows of a DataFrame using the .head() or .tail() methods, respectively. You can specify the number of rows through the n argument (the default value is 5).
 
+```python
+df.head()
+```
+**Code Explanation**
+This code is written in Python and it calls the head() method on a Pandas DataFrame object named df.
+• The head() method is used to display the first few rows of the DataFrame.
+• By default, it displays the first 5 rows, but you can pass an integer argument to display a different number of rows.
+• This code is useful for quickly inspecting the contents of a DataFrame and getting a sense of what kind of data it contains.
 
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/f653f88b-e36f-4950-858d-553b5a4a3ce7)
 
+                                    First five rows of the DataFrame 
