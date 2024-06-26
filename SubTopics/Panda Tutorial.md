@@ -85,12 +85,38 @@ df = pd.read_json("diabetes.json")
 ## Outputting data in pandas
 Just as pandas can import data from various file types, it also allows you to export data into various formats. This happens especially when data is transformed using pandas and needs to be saved locally on your machine. Below is how to output pandas DataFrames into various formats.
 
+### Outputting a DataFrame into a CSV file
+A pandas DataFrame (here we are using df) is saved as a CSV file using the .to_csv() method. The arguments include the filename with path and index – where index = True implies writing the DataFrame’s index.
 
+```python
+df.to_csv("diabetes_out.csv", index=False)
+```
+**Code Explanation**
 
+. This code saves a pandas DataFrame df to a CSV file named "diabetes_out.csv" in the current working directory.
+• The to_csv() method is used to write the DataFrame to a CSV file.
+• The index=False argument specifies that the index column should not be included in the output file.
+• This is useful when the index is not meaningful or when it is already included as a separate column in the DataFrame.
 
+## Outputting a DataFrame into a JSON file
+Export DataFrame object into a JSON file by calling the .to_json() method.
+```python
+df.to_json("diabetes_out.json")
+```
 
+**Note:** A JSON file stores a tabular object like a DataFrame as a key-value pair. Thus you would observe repeating column headers in a JSON file.
 
+## Outputting a DataFrame into a text file
+As with writing DataFrames to CSV files, you can call .to_csv(). The only differences are that the output file format is in .txt, and you need to specify a separator using the sep argument.
 
+```python
+df.to_csv('diabetes_out.txt', header=df.columns, index=None, sep=' ')
+```
+## Outputting a DataFrame into an Excel file
+Call .to_excel() from the DataFrame object to save it as a “.xls” or “.xlsx” file.
+```python
+df.to_excel("diabetes_out.xlsx", index=False)
+```
 
 
 
