@@ -32,3 +32,25 @@ Less verbose per unit operations: Code written in pandas is less verbose, requir
 Intuitive view of data: pandas offers exceptionally intuitive data representation that facilitates easier data understanding and analysis.
 Extensive feature set: It supports an extensive set of operations from exploratory data analysis, dealing with missing values, calculating statistics, visualizing univariate and bivariate data, and much more.
 Works with large data: pandas handles large data sets with ease. It offers speed and efficiency while working with datasets of the order of millions of records and hundreds of columns, depending on the machine.
+
+## Install pandas
+Installing pandas is straightforward; just use the pip install command in your terminal. 
+```python
+pip install pandas
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
