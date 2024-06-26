@@ -39,8 +39,51 @@ Installing pandas is straightforward; just use the pip install command in your t
 pip install pandas
 ```
 
+## Importing data in pandas
+To begin working with pandas, import the pandas Python package as shown below. When importing pandas, the most common alias for pandas is pd.
+
+```python
+import pandas as pd
+```
+Use read_csv() with the path to the CSV file to read a comma-separated values file
+
+```python
+df = pd.read_csv("diabetes.csv")
+```
+
+This read operation loads the CSV file diabetes.csv to generate a pandas Dataframe object df.
+
+### Importing text files
+
+Reading text files is similar to CSV files. The only nuance is that you need to specify a separator with the sep argument, as shown below. The separator argument refers to the symbol used to separate rows in a DataFrame. Comma (sep = ","), whitespace(sep = "\s"), tab (sep = "\t"), and colon(sep = ":") are the commonly used separators. Here \s represents a single white space character.
 
 
+```python
+df = pd.read_csv("diabetes.txt", sep="\s")
+```
+### Importing Excel files (single sheet)
+Reading excel files (both XLS and XLSX) is as easy as the read_excel() function, using the file path as an input.
+```python
+df = pd.read_excel('diabetes.xlsx')
+```
+You can also specify other arguments, such as header for to specify which row becomes the DataFrame's header. It has a default value of 0, which denotes the first row as headers or column names. You can also specify column names as a list in the names argument. The index_col (default is None) argument can be used if the file contains a row index.
+
+### Importing Excel files (multiple sheets)
+Reading Excel files with multiple sheets is not that different. You just need to specify one additional argument, sheet_name, where you can either pass a string for the sheet name or an integer for the sheet position (note that Python uses 0-indexing, where the first sheet can be accessed with sheet_name = 0)
+
+```python
+# Extracting the second sheet since Python uses 0-indexing
+df = pd.read_excel('diabetes_multi.xlsx', sheet_name=1)
+```
+
+### Importing JSON file
+Similar to the read_csv() function, you can use read_json() for JSON file types with the JSON file name as the argument. The below code reads a JSON file from disk and creates a DataFrame object df.
+
+```python
+df = pd.read_json("diabetes.json")
+```
+## Outputting data in pandas
+Just as pandas can import data from various file types, it also allows you to export data into various formats. This happens especially when data is transformed using pandas and needs to be saved locally on your machine. Below is how to output pandas DataFrames into various formats.
 
 
 
