@@ -90,6 +90,32 @@ Similar to the read_csv() function, you can use read_json() for JSON file types 
 ```python
 df = pd.read_json("diabetes.json")
 ```
+
+**Example**
+
+```python
+import pandas as pd
+
+df = pd.read_json('data.json')
+
+print(df.to_string())
+```
+
+### Dictionary as JSON
+
+#2.Example
+```python
+import pandas as pd
+
+C_Data = { 'Name' :['Bharath','Bharath','Sumathi','Lalit','Abdul'],
+          'Age': [27,28,33,34,23],
+          'Address': ['Chennai','Chennai','Delhi','Hyd','bangalore'],
+          'Company':['Aspire system','Aspire system','Aspire system','Aspire system','Aspire system']}
+df =pd.DataFrame(C_Data)
+
+print(df)
+```
+
 ## Outputting data in pandas
 Just as pandas can import data from various file types, it also allows you to export data into various formats. This happens especially when data is transformed using pandas and needs to be saved locally on your machine. Below is how to output pandas DataFrames into various formats.
 
