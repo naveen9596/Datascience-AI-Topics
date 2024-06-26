@@ -223,7 +223,12 @@ df.shape[1] # Get the number of columns only
 768
 9
 ```
+### Get all columns and column names
+Calling the .columns attribute of a DataFrame object returns the column names in the form of an Index object. As a reminder, a pandas index is the address/label of the row or column.
 
+```python
+df.columns
+```
 
 
                                 
