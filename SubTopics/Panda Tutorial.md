@@ -137,3 +137,64 @@ This code is written in Python and it calls the head() method on a Pandas DataFr
 ![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/f653f88b-e36f-4950-858d-553b5a4a3ce7)
 
                                     First five rows of the DataFrame 
+```python
+df.tail(n = 10)
+```
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/f7d7f04f-b7da-429a-a195-8b4d74eb9265)
+
+### Understanding data using .describe()
+
+The .describe() method prints the summary statistics of all numeric columns, such as count, mean, standard deviation, range, and quartiles of numeric columns.
+
+```python
+df.describe()
+```
+
+**Code Explanation**
+This code is written in Python and it calls the describe() method on a Pandas DataFrame object named df.
+• The describe() method generates descriptive statistics of the DataFrame, including count, mean, standard deviation, minimum, maximum, and quartile values for each column.
+• This method is useful for quickly understanding the distribution of data in a DataFrame.
+
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/1d931b2b-2068-4fd1-9d60-268d97719568)
+
+It gives a quick look at the scale, skew, and range of numeric data.
+
+You can also modify the quartiles using the percentiles argument. Here, for example, we’re looking at the 30%, 50%, and 70% percentiles of the numeric columns in DataFrame df.
+
+```python
+df.describe(percentiles=[0.3, 0.5, 0.7])
+```
+
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/af9886f7-c8b2-4a8b-b0b1-5803dbee333d)
+
+You can also isolate specific data types in your summary output by using the include argument. Here, for example, we’re only summarizing the columns with the integer data type. 
+
+```python
+df.describe(include=[int])
+```
+
+* This code is written in Python and it uses the describe() method to generate descriptive statistics of a DataFrame.
+• The include parameter is used to specify the data types to be included in the output.
+• In this case, it includes only integer columns in the output.
+• So, df.describe(include=[int]) will generate descriptive statistics of only the integer columns in the DataFrame df.
+• This includes the count, mean, standard deviation, minimum, maximum, and quartile values of the integer columns.
+
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/97942374-bd98-4570-993d-a7727c5545bc)
+
+Similarly, you might want to exclude certain data types using exclude argument.
+
+```python
+df.describe(exclude=[int])
+```
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/850f22b4-d7d9-412e-bc0e-a5ec1b783ffe)
+
+
+Often, practitioners find it easy to view such statistics by transposing them with the .T attribute.
+
+```python
+df.describe().T
+```
+
+
+
+                                
