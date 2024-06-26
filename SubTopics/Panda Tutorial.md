@@ -194,6 +194,35 @@ Often, practitioners find it easy to view such statistics by transposing them wi
 ```python
 df.describe().T
 ```
+* This code uses the describe() method to generate summary statistics of a pandas DataFrame df.
+• The T attribute is then used to transpose the resulting summary statistics table, so that the rows become columns and vice versa.
+• This makes it easier to read and compare the statistics for different columns.
+• For example, if df has columns for "age", "income", and "education", the resulting table will have rows for "count", "mean", "std", "min", "25%", "50%", "75%", and "max", and columns for "age", "income", and "education".
+• Overall, this code is useful for quickly getting an overview of the distribution and range of values in a DataFrame.
+
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/83d37e5f-485e-4913-9c58-4b0f942bf634)
+
+### Understanding data using .info()
+The .info() method is a quick way to look at the data types, missing values, and data size of a DataFrame. Here, we’re setting the show_counts argument to True, which gives a few over the total non-missing values in each column. We’re also setting memory_usage to True, which shows the total memory usage of the DataFrame elements. When verbose is set to True, it prints the full summary from .info(). 
+
+```python
+df.info(show_counts=True, memory_usage=True, verbose=True)
+```
+![image](https://github.com/naveen9596/Datascience-AI-Topics/assets/108785228/5fa32930-edaa-4b00-9dfa-0a84ac332d35)
+
+### Understanding your data using .shape
+The number of rows and columns of a DataFrame can be identified using the .shape attribute of the DataFrame. It returns a tuple (row, column) and can be indexed to get only rows, and only columns count as output.
+
+```python
+df.shape # Get the number of rows and columns
+df.shape[0] # Get the number of rows only
+df.shape[1] # Get the number of columns only
+```
+```python
+(768,9)
+768
+9
+```
 
 
 
